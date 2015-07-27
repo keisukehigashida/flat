@@ -1,0 +1,17 @@
+<h1>Tweet#index</h1>
+<p>Find me in app/views/tweet/index.html.erb</p>
+
+<%= form_for Table.new do |f| %>
+  <%= f.text_field :from %>
+  <%= f.text_field :to %>
+  <%= f.text_field :num %>
+  <%= f.submit %>
+<% end %>
+
+<table>
+<% @lists.each do |list| %>
+<tr>
+  <p><td><%= list.from %></td><td><%= list.to %></td><td><%= list.num %></td></p>
+</tr>
+<% end %>
+</table>
